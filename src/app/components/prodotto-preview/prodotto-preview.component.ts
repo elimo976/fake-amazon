@@ -14,12 +14,14 @@ export class ProdottoPreviewComponent {
   mostraBottoneNonMiInteressa: boolean = false;
 
   @Output()
-  onIettalo = new EventEmitter<Prodotto>(); // generics: un modo che abbiamo per passare un tipo come parametro
-  // EventEmitter è un "emettitore di eventi", che verrà poi lanciato da 'emit'
-
-  iettalo() {
+  onNonMiInteressa = new EventEmitter<Prodotto>();
+ 
+  nonMiInteressa() {
     console.log("Non mi interessa il prodotto", this.prodotto!.title);
 
-    this.onIettalo.emit(this.prodotto);
+    this.onNonMiInteressa.emit(this.prodotto);
   }
 }
+ 
+  // generics: un modo che abbiamo per passare un tipo come parametro
+  // EventEmitter è un "emettitore di eventi", che verrà poi lanciato da 'emit'

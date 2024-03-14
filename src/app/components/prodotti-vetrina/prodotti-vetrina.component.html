@@ -1,4 +1,5 @@
 <h3>Prodotti in vetrina</h3>
+<app-spinner *ngIf="prodotti.length==0"></app-spinner>
 <div class="row row-cols-1 row-cols-md-4 g-4">
-    <app-prodotto-preview *ngFor="let p of prodotti" [prodotto]="p" (onIettalo)="iettaProdotto($event)"></app-prodotto-preview>
+    <app-prodotto-preview *ngFor="let p of prodotti" [prodotto]="p" (onNonMiInteressa)="rimuoviProdotto($event)" [mostraBottoneNonMiInteressa]="true"></app-prodotto-preview>
 </div>

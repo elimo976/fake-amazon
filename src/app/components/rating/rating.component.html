@@ -12,7 +12,7 @@
     <i class="bi" *ngFor="let s of stelle" [ngClass]="{
         'bi-star-fill': rating.rate >= s,
         'bi-star':  rating.rate < s - 0.5,
-        'bi-star-half': rating.rate >= s -5 && rating.rate < s
+        'bi-star-half': rating.rate >= s -0.5 && rating.rate < s
     }"></i>
     {{rating.rate}} ({{rating.count}} voti)
 </div>

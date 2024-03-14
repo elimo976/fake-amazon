@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { ProdottoPreviewComponent } from './components/prodotto-preview/prodotto
 import { HeaderComponent } from './components/header/header.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { ProdottiOffertaComponent } from './components/prodotti-offerta/prodotti-offerta.component';
+import { CategorieComponent } from './components/categorie/categorie.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { ProdottiOffertaComponent } from './components/prodotti-offerta/prodotti
     ProdottoPreviewComponent,
     HeaderComponent,
     RatingComponent,
-    ProdottiOffertaComponent
+    ProdottiOffertaComponent,
+    CategorieComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

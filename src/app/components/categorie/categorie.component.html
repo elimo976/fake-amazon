@@ -1,0 +1,6 @@
+<div class="btn-group" *ngIf="categorie.length">
+    <button type="button" *ngFor="let c of categorie" class="btn btn-outline-primary">
+        {{c}}
+    </button>
+</div>
+<app-spinner *ngIf="categorie.length==0" tipo="text-warning"></app-spinner>
