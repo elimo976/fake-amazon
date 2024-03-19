@@ -1,8 +1,9 @@
 <div class="col" *ngIf="prodotto">
     <div class="card">
-        <img [src]="prodotto.image" alt="" class="card-img-top" *ngIf="prodotto.rating.rate >= 3">
+        <a [routerLink]="['/prodotto', prodotto.id]"><img [src]="prodotto.image" alt="" class="card-img-top" *ngIf="prodotto.rating.rate >= 3"></a>
         <div class="card-body">
-            <h5 class="card-title">{{prodotto.title}}</h5>
+            <h5 class="card-title">
+                <a [routerLink]="['/prodotto', prodotto.id]">{{prodotto.title}}</a></h5>
             <p>
                 Prezzo: {{prodotto.price | currency}}
             </p>

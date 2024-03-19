@@ -1,13 +1,9 @@
+<app-header></app-header>
 <div class="container p-3">
-    <app-header></app-header>
-    <app-categorie></app-categorie>
-    <hr>
-    <app-prodotto-preview [prodotto]="prodottoDelMese"></app-prodotto-preview>
-    <hr>
-    <app-prodotti-vetrina></app-prodotti-vetrina>
-    <hr>
-    <app-prodotti-offerta></app-prodotti-offerta>
+    <router-outlet></router-outlet>
 <hr>
-    <h3>Cosa pensano di noi</h3>
-    <app-rating [rating]="ratingTrustPilot"></app-rating>
+    <footer>
+        <h3>Cosa pensano di noi</h3>
+        <app-rating [rating]="ratingTrustPilot"></app-rating>
+    </footer>
 </div>

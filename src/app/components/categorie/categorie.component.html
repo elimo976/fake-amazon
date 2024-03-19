@@ -1,5 +1,5 @@
 <div class="btn-group" *ngIf="categorie.length">
-    <button type="button" *ngFor="let c of categorie" class="btn btn-outline-primary">
+    <button type="button" *ngFor="let c of categorie" class="btn btn-outline-primary" [routerLink]="['/prodotti/', 'categoria', c]">
         {{c}}
     </button>
 </div>

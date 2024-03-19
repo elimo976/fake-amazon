@@ -1,0 +1,6 @@
+<div *ngIf="prodotto">
+    <h1>{{prodotto.title}}</h1>
+    <img class="img-fluid" [src]="prodotto.image"/>
+    <app-rating
+        [rating]="prodotto.rating"></app-rating>
+</div>

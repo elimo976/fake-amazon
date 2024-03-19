@@ -15,6 +15,7 @@ export class ProdottiVetrinaComponent implements OnInit, OnDestroy {
   constructor(private prodottoService: ProdottiService) {
 
   }
+// ciclo di vita:
   ngOnDestroy(): void {
 
   }
