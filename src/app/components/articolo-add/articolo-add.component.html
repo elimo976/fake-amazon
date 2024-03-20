@@ -1,0 +1,37 @@
+<h1>Nuovo Articolo</h1>
+<hr />
+<form>
+  <div class="mb-3">
+    <label for="title" class="form-label">Titolo</label>
+    <input
+      [(ngModel)]="model.title"
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      placeholder="Titolo..."
+    />
+  </div>
+  <div class="mb-3">
+    <label for="text" class="form-label">Testo</label>
+    <textarea
+      [(ngModel)]="model.text"
+      class="form-control"
+      id="text"
+      name="text"
+      rows="3"
+    ></textarea>
+  </div>
+  <div class="form-check mb-3">
+    <input
+      [(ngModel)]="model.published"
+      class="form-check-input"
+      type="checkbox"
+      id="published"
+      name="published"
+    />
+    <label class="form-check-label" for="published">Pubblicato</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Salva</button>
+</form>
+{{ model | json }}

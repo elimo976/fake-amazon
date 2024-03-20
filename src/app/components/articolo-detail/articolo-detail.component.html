@@ -1,0 +1,8 @@
+<div *ngIf="articolo">
+    <h1 class="display-3">{{articolo.title}}</h1>
+    <p>
+        {{articolo.text}}
+    </p>
+    <hr>
+    <a [routerLink]="['/blog']">Ritorna al blog</a>
+</div>
