@@ -4,5 +4,9 @@
         {{articolo.text}}
     </p>
     <hr>
-    <a [routerLink]="['/blog']">Ritorna al blog</a>
+    <div class="d-flex gap-3">
+        <a class="btn btn-secondary" [routerLink]="['/blog']">Ritorna al blog</a>
+        <button type="button" class="btn btn-danger" (click)="rimuovi()">Rimuovi articolo
+        </button>
+    </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Articolo } from 'src/app/models/articolo';
 import { BlogService } from 'src/app/services/blog.service';
 
@@ -13,7 +13,8 @@ export class ArticoloDetailComponent implements OnInit {
 
   constructor(
     private blogService: BlogService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {
 
   }
@@ -22,5 +23,12 @@ export class ArticoloDetailComponent implements OnInit {
   
     this.blogService.getArticoloById(id)
       .subscribe(articolo => this.articolo = articolo);
+  }
+
+  rimuovi() {
+    if (confirm("Sei sicuro?")) {
+      this.blogService.deleteArticoloById(this.articolo!.id)
+        .subscribe(dati => this.router.navigate(['/blog']));
+   }
   }
 }
